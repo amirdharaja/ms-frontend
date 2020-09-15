@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Ubuntu&display=swap&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+* {
+  font-family: 'Karla', 'Ubuntu', 'Roboto', sans-serif;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
+}
