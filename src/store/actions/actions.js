@@ -1,5 +1,5 @@
 import axios from 'axios'
-import * as ActionTypes from './actionTypes'
+import * as ActionTypes from './ActionTypes'
 
 
 const BASE_URL = 'http://localhost:8000'
