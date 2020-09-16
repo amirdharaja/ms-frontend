@@ -1,11 +1,11 @@
 import React from 'react';
-import axios from 'axios'
 
+import axios from 'axios';
 import { Spinner } from 'reactstrap'
 import '../styles/css/style.css';
+import {BASE_URL} from '../store/actions/ActionTypes';
 
 import $ from 'jquery';
-const BASE_URL = 'http://127.0.0.1:8000'
 
 class ItemSlide extends React.PureComponent {
 

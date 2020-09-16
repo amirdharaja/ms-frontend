@@ -1,20 +1,16 @@
 import React from 'react';
-import axios from 'axios'
 
+import axios from 'axios';
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
-
 
 import Product from '../containers/Product';
 import MainNav from '../containers/Nav';
 import Message from '../containers/Message';
 
-import item_not_found_1 from '../resources/item_not_found_1.jpg'
-
-import { Input, ListGroupItem, Row, Col, Form, Spinner } from 'reactstrap'
-
-
-const BASE_URL = 'http://127.0.0.1:8000'
+import item_not_found_1 from '../resources/item_not_found_1.jpg';
+import { Input, ListGroupItem, Row, Col, Form, Spinner } from 'reactstrap';
+import {BASE_URL} from '../store/actions/ActionTypes';
 
 class Products extends React.PureComponent {
 

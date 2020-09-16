@@ -1,6 +1,8 @@
 import React from 'react';
 
-const IMG_BASE_URL = 'http://localhost:8000/images/'
+import BASE_URL from '../Products';
+
+const IMG_BASE_URL = BASE_URL + '/images/'
 
 
 const CartItem = ({ id, name, image, count, rate, discount, discount_type, weight, changeFunc, removeFunc }) => (

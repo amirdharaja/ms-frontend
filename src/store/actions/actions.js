@@ -2,9 +2,6 @@ import axios from 'axios'
 import * as ActionTypes from './ActionTypes'
 
 
-const BASE_URL = 'http://localhost:8000'
-
-
 export const authStart = () => ({ type: ActionTypes.AUTH_START })
 
 export const authSuccess = token => ({ type: ActionTypes.AUTH_SUCCESS, token: token })
@@ -56,7 +53,7 @@ export const message = () => {
 export const verifyOtp = (otp) => {
     let phone = localStorage.getItem('phone')
     return dispatch => {
-        axios.post(BASE_URL + '/validate/otp/', { otp: otp, phone: phone })
+        axios.post(ActionTypes.BASE_URL + '/validate/otp/', { otp: otp, phone: phone })
             .then(response => {
                 dispatch(handleOtp(response.status));
             })
@@ -77,7 +74,7 @@ export const authLogin = (username, password) => {
 
     return dispatch => {
         dispatch(authStart());
-        axios.post(BASE_URL + '/login/', {
+        axios.post(ActionTypes.BASE_URL + '/login/', {
             username: username,
             password: password,
         })
@@ -102,7 +99,7 @@ export const authLogin = (username, password) => {
 export const authSignup = (data) => {
     return dispatch => {
         dispatch(authStart());
-        axios.post(BASE_URL + '/register/', { data: data })
+        axios.post(ActionTypes.BASE_URL + '/register/', { data: data })
             .then(response => {
                 localStorage.setItem('phone', data['phone'])
                 dispatch(handleRegister(response.status));
@@ -132,7 +129,7 @@ export const authCheckState = () => {
 
 export const getHome = () => {
     return dispatch => {
-        const url = BASE_URL + '/categorys/'
+        const url = ActionTypes.BASE_URL + '/categorys/'
         if (localStorage.getItem('token')) {
             axios.get(url, { headers: { 'Authorization': `token ${localStorage.getItem('token')}` } })
                 .then(response => {
@@ -148,7 +145,7 @@ export const getHome = () => {
 
 export const getOrders = () => {
     return dispatch => {
-        const url = BASE_URL + '/orders/'
+        const url = ActionTypes.BASE_URL + '/orders/'
         if (localStorage.getItem('token')) {
             axios.get(url, { headers: { 'Authorization': `token ${localStorage.getItem('token')}` } })
                 .then(response => {
@@ -160,7 +157,7 @@ export const getOrders = () => {
 
 export const getCategory = () => {
     return dispatch => {
-        const url = BASE_URL + '/category/'
+        const url = ActionTypes.BASE_URL + '/category/'
         axios.get(url,)
             .then(response => {
                 dispatch(categoryData(response.data));
@@ -170,7 +167,7 @@ export const getCategory = () => {
 
 export const checkoutData = () => {
     return dispatch => {
-        const url = BASE_URL + '/checkout/'
+        const url = ActionTypes.BASE_URL + '/checkout/'
         if (localStorage.getItem('token')) {
             axios.get(url, { headers: { 'Authorization': `token ${localStorage.getItem('token')}` } })
                 .then(response => {

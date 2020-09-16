@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios'
 
+import axios from 'axios';
 import MainNav from '../containers/Nav';
 import Message from '../containers/Message';
 
@@ -10,10 +10,9 @@ import { Spinner } from 'reactstrap'
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
 
-import '../styles/css/style.css'
+import '../styles/css/style.css';
 
-
-const BASE_URL = 'http://127.0.0.1:8000'
+import {BASE_URL} from '../store/actions/ActionTypes';
 
 class Setting extends React.Component {
 

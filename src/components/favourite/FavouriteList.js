@@ -1,16 +1,15 @@
 import React from 'react';
-import FavouriteItem from './FavouriteItem'
-import axios from 'axios';
 
+import axios from 'axios';
 import { connect } from 'react-redux';
 import * as userActions from '../../store/actions/actions';
 
 import MainNav from '../../containers/Nav';
 import Message from '../../containers/Message';
+import FavouriteItem from './FavouriteItem';
 
-import { Spinner } from 'reactstrap'
-
-const BASE_URL = 'http://127.0.0.1:8000'
+import { Spinner } from 'reactstrap';
+import  BASE_URL from '../Products';
 
 
 class FavouriteList extends React.PureComponent {

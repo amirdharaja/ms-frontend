@@ -1,16 +1,16 @@
 import React from 'react';
-import CartItem from './CartItem'
 
+import axios from 'axios';
+import CartItem from './CartItem';
 import MainNav from '../../containers/Nav';
 import Message from '../../containers/Message';
 
 import { connect } from 'react-redux';
 import * as userActions from '../../store/actions/actions';
 
-import { Spinner } from 'reactstrap'
+import { Spinner } from 'reactstrap';
 
-import axios from 'axios';
-const BASE_URL = 'http://127.0.0.1:8000'
+import BASE_URL from './CartItem';
 
 
 class CartList extends React.PureComponent {

@@ -1,18 +1,19 @@
 
 import React, { Component } from 'react';
 
-import { Spinner } from 'reactstrap'
+import { Spinner } from 'reactstrap';
 
+import axios from 'axios';
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
 
 import MainNav from '../containers/Nav';
 import Message from '../containers/Message';
 
-import axios from 'axios';
+import {BASE_URL} from '../store/actions/ActionTypes';
+
 import './style.scss';
 
-const BASE_URL = 'http://127.0.0.1:8000'
 
 class Checkout extends Component {
 

@@ -1,7 +1,10 @@
 import React from 'react';
+
+import {BASE_URL} from '../store/actions/ActionTypes';
 import "../styles/css/style.css";
 
-const BASE_CATEGORY_IMG_URL = 'http://localhost:8000/images/';
+const BASE_CATEGORY_IMG_URL = BASE_URL + '/images/';
+
 
 export const Category = props => {
     const category_details = props.category_details

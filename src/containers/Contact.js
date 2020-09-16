@@ -1,11 +1,12 @@
 
 import React from 'react';
-import "../styles/scss/style.scss";
-import $ from 'jquery'
 
 import axios from 'axios';
 import Message from '../containers/Message';
+import {BASE_URL} from '../store/actions/ActionTypes';
+import "../styles/scss/style.scss";
 
+import $ from 'jquery'
 
 $(document).ready(function () {
     $('.flip').click(function () {
@@ -14,7 +15,6 @@ $(document).ready(function () {
     });
 });
 
-const BASE_URL = 'http://localhost:8000'
 
 class Contact extends React.Component {
 

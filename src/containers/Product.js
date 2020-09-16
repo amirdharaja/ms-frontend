@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import NumericInput from 'react-numeric-input';
-const IMG_BASE_URL = 'http://localhost:8000'
+import {BASE_URL} from '../store/actions/ActionTypes';
+
 
 const Product = ({ id, name, weight, slug, image, rate, divide_by, discount_type, discount, sub_category, addFunc, addFavourite }) => {
     let cart_count = 1
@@ -41,7 +42,7 @@ const Product = ({ id, name, weight, slug, image, rate, divide_by, discount_type
                         </div>
                     }
                 </h5>
-                <a href={`/${sub_category}/${slug}/${id}`}><img src={IMG_BASE_URL + image} alt={name} title={name} /></a>
+                <a href={`/${sub_category}/${slug}/${id}`}><img src={BASE_URL + image} alt={name} title={name} /></a>
                 <h5>{name}</h5>
                 {divide_by === '1' &&
                     <div>

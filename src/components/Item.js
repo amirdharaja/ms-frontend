@@ -1,18 +1,16 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
 import MainNav from '../containers/Nav';
 import Message from '../containers/Message';
-
-import ItemSlide from '../containers/ItemSlide'
+import ItemSlide from '../containers/ItemSlide';
 
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
+import {BASE_URL} from '../store/actions/ActionTypes';
 
-import '../styles/css/style.css'
+import '../styles/css/style.css';
 
-
-const BASE_URL = 'http://127.0.0.1:8000'
 
 class Item extends React.Component {
 

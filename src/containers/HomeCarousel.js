@@ -6,9 +6,10 @@ import {
   CarouselIndicators,
   // CarouselCaption
 } from 'reactstrap';
+import {BASE_URL} from '../store/actions/ActionTypes';
 
+const BASE_SLIDE_IMG_URL = BASE_URL + '/images/';
 
-const BASE_SLIDE_IMG_URL = 'http://localhost:8000/images/';
 
 export const HomeCarousel = props => {
   const main_slide_images = props.main_slide_images
