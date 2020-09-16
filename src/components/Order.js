@@ -5,17 +5,12 @@ import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
 
 
-import './style.scss'
-
-
 class Order extends Component {
-
 
   componentDidMount() {
     this.props.getOrders()
     this.props.category()
   }
-
 
   render() {
     return (

@@ -12,8 +12,6 @@ import Message from '../containers/Message';
 
 import {BASE_URL} from '../store/actions/ActionTypes';
 
-import './style.scss';
-
 
 class Checkout extends Component {
 
