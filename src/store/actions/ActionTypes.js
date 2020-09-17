@@ -14,4 +14,4 @@ export const LOGIN_MODAL = 'LOGIN_MODAL';
 export const REGISTER_MODAL = 'REGISTER_MODAL';
 export const OTP_MODAL = 'OTP_MODAL';
 
-export const BASE_URL = 'https://ms-django.herokuapp.com';
+export const BASE_URL = 'http://127.0.0.1:8000';
