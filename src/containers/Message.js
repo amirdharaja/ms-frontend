@@ -1,6 +1,7 @@
 import React from 'react';
 import { store } from 'react-notifications-component';
 
+
 const Message = ({ messageTitle, message, alertType }) => {
 
     return (

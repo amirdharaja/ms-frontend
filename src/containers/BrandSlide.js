@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/scss/style.scss';
 
 
 class BrandSlide extends React.PureComponent {

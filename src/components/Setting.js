@@ -5,12 +5,9 @@ import MainNav from '../containers/Nav';
 import Message from '../containers/Message';
 
 import { Spinner } from 'reactstrap'
-// import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, Row, Col } from 'reactstrap';
 
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
-
-import '../styles/css/style.css';
 
 import {BASE_URL} from '../store/actions/ActionTypes';
 

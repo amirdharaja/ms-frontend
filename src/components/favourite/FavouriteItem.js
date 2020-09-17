@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BASE_URL from './FavouriteList'
+import BASE_URL from './FavouriteList';
 
-const IMG_BASE_URL = BASE_URL + '/images/'
+const IMG_BASE_URL = BASE_URL + '/images/';
 
 
 const FavouriteItem = ({id, name, image, removeFunc }) => (

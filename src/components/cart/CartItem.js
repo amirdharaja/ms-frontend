@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BASE_URL from '../Products';
+import {BASE_URL} from '../../store/actions/ActionTypes';
 
 const IMG_BASE_URL = BASE_URL + '/images/'
 

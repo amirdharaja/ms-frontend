@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {BASE_URL} from '../store/actions/ActionTypes';
-import "../styles/css/style.css";
 
 const BASE_CATEGORY_IMG_URL = BASE_URL + '/images/';
 

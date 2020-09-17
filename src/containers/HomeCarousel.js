@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  // CarouselCaption
 } from 'reactstrap';
+
 import {BASE_URL} from '../store/actions/ActionTypes';
 
 const BASE_SLIDE_IMG_URL = BASE_URL + '/images/';

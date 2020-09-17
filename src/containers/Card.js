@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Card = ({property}) => {
     const {index, picture, city, address, bedrooms, bathrooms, carSpaces} = property
     return (

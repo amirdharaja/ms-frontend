@@ -4,14 +4,14 @@ import React, { Component } from 'react';
 import * as userActions from '../store/actions/actions';
 import { connect } from 'react-redux';
 
-import MainNav from '../containers/Nav.js'
-import HomeCarousel from '../containers/HomeCarousel.js'
-import Category from '../containers/Category'
-import About from '../containers/About'
-import Contact from '../containers/Contact'
-import ItemSlide from '../containers/ItemSlide'
-import BrandSlide from '../containers/BrandSlide'
-import PageImage from '../containers/Image'
+import MainNav from '../containers/Nav.js';
+import HomeCarousel from '../containers/HomeCarousel.js';
+import Category from '../containers/Category';
+import About from '../containers/About';
+import Contact from '../containers/Contact';
+import ItemSlide from '../containers/ItemSlide';
+import BrandSlide from '../containers/BrandSlide';
+import PageImage from '../containers/Image';
 
 import { Spinner } from 'reactstrap';
 import '../styles/css/style.css'

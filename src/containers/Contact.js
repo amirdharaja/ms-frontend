@@ -4,7 +4,6 @@ import React from 'react';
 import axios from 'axios';
 import Message from '../containers/Message';
 import {BASE_URL} from '../store/actions/ActionTypes';
-import "../styles/scss/style.scss";
 
 import $ from 'jquery'
 
@@ -130,7 +129,6 @@ class Contact extends React.Component {
                         alertType={this.state.alertType}
                     />
                 }
-
 
                 <h3 id='title'>We are always with you</h3>
                 <div className="cont-contactBtn">

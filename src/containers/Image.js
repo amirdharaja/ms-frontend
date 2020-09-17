@@ -1,8 +1,8 @@
 import React from 'react';
 
 import axios from 'axios';
+
 import { Spinner } from 'reactstrap';
-import '../styles/css/style.css';
 import {BASE_URL} from '../store/actions/ActionTypes';
 
 
@@ -22,7 +22,6 @@ class PageImage extends React.PureComponent {
     }
 
     render() {
-        console.log(this.state.images)
         return (
             <main id='home-image'>
                 {this.state.isLoading ?
@@ -32,7 +31,7 @@ class PageImage extends React.PureComponent {
                     :
                     <div>
                         {this.state.images.length >= 1 && this.state.images.map(function (image, index) {
-                            return <img id='page-image' key={index} alt='page-image' src={BASE_URL + image.images} />
+                            return <img id='page-image' key={index} alt='page-offer' src={BASE_URL + image.images} />
                         })}
                     </div>
                 }

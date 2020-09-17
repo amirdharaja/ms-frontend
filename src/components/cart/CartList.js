@@ -3,14 +3,13 @@ import React from 'react';
 import axios from 'axios';
 import CartItem from './CartItem';
 import MainNav from '../../containers/Nav';
-import Message from '../../containers/Message';
 
 import { connect } from 'react-redux';
 import * as userActions from '../../store/actions/actions';
 
 import { Spinner } from 'reactstrap';
 
-import BASE_URL from './CartItem';
+import {BASE_URL} from '../../store/actions/ActionTypes';
 
 
 class CartList extends React.PureComponent {
@@ -163,13 +162,13 @@ class CartList extends React.PureComponent {
                     />
                 </div>
 
-                {this.state.alertVisible &&
+                {/* {this.state.alertVisible &&
                     <Message
                         messageTitle={this.state.messageTitle}
                         message={this.state.message}
                         alertType={this.state.alertType}
                     />
-                }
+                } */}
 
 
                 {

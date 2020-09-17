@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import MainNav from '../containers/Nav.js'
-import { Spinner } from 'reactstrap'
+
+import MainNav from '../containers/Nav.js';
+import { Spinner } from 'reactstrap';
+
 import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
+
 
 
 class Order extends Component {

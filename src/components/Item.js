@@ -9,8 +9,6 @@ import { connect } from 'react-redux';
 import * as userActions from '../store/actions/actions';
 import {BASE_URL} from '../store/actions/ActionTypes';
 
-import '../styles/css/style.css';
-
 
 class Item extends React.Component {
 
