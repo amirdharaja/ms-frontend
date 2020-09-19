@@ -101,7 +101,6 @@ class CartList extends React.PureComponent {
                 })
 
                 .catch(error => {
-                    console.log(error)
                     if (error.response) {
                         this.setState({ message: error.response.data.message, alertType: 'warning', alertVisible: true });
                     }
@@ -139,7 +138,6 @@ class CartList extends React.PureComponent {
                 })
 
                 .catch(error => {
-                    console.log(error)
                     if (error.response) {
                         this.setState({ message: error.response.data.error, alertType: 'danger', alertVisible: true });
                     }

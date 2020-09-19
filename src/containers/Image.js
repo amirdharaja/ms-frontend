@@ -16,7 +16,6 @@ class PageImage extends React.PureComponent {
     componentDidMount() {
         axios.get(BASE_URL + '/page/images/')
             .then(response => {
-                console.log(response.data.data)
                 this.setState({ images: response.data.data, isLoading: false })
             });
     }

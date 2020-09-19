@@ -17,7 +17,6 @@ const Product = ({ id, name, weight, slug, image, rate, divide_by, discount_type
 
     const onChange = (event) => {
         setValue(event.target.value)
-        console.log(value)
         if (event.target.value === '4') setMrp(rate / 4)
         else if (event.target.value === '3') setMrp(rate - rate / 4)
         else if (event.target.value === '2') setMrp(rate / 2)

@@ -43,7 +43,6 @@ class Contact extends React.Component {
             errors: {},
             alertVisible: false
         });
-        console.log(this.state.userContactRequest)
     }
 
     formValidation = () => {
