@@ -980,7 +980,7 @@ input::-webkit-outer-spin-button,
 
 @media all and (max-width: 668px) {
   #home-carousel img{
-    height: 60vh;
+    height: 28vh;
   }
   #address-form input, #address-form select{
     width: 440px;
@@ -1081,6 +1081,9 @@ input::-webkit-outer-spin-button,
 }
 
 @media all and (max-width: 427px) {
+  #home-carousel img{
+    height: 30vh;
+  }
 
   #address-form input, #address-form select{
     width: 300px;
@@ -1104,7 +1107,9 @@ input::-webkit-outer-spin-button,
 }
 
 @media all and (max-width: 376px) {
-
+  #home-carousel img{
+    height: 26vh;
+  }
   #checkout-snippet > div > #sub-total > table > tbody > tr > #a,
   #checkout-snippet > div > #grand-total > table > tbody > tr > #a{
     width: 160px;
@@ -1148,7 +1153,9 @@ input::-webkit-outer-spin-button,
   }
 }
 @media all and (max-width: 321px) {
-
+  #home-carousel img{
+    height: 23vh;
+  }
   #address-form input, #address-form select{
     width: 250px;
   }
