@@ -84,7 +84,6 @@ const authLogout = (state, action) => {
     });
 }
 
-
 const homeData = (state, action) => {
     return updateObject({
         ...state,
@@ -107,7 +106,6 @@ const ordersData = (state, action) => {
         orders_count: action.data.orders_count,
     });
 }
-
 
 const checkout = (state, action) => {
     return updateObject(state, {
@@ -165,6 +163,32 @@ const verifyOtp = (state, action) => {
     }
 }
 
+const handleResendOtp = (state, action) => {
+    if (action.data === 400) {
+        return updateObject(state, {
+            ...state,
+            alertVisible: true,
+            messages: 'OTP send error',
+            messageTitle: 'Sorry',
+            alertType: 'danger',
+            otpModal: true
+        });
+    }
+    else if (action.data === 200) {
+        return updateObject(state, {
+            ...state,
+            alertVisible: true,
+            messages: 'OTP successfully send to your mobile number',
+            messageTitle: 'Success',
+            alertType: 'success',
+            otpModal: true,
+            loginModal:false,
+            registerModal:false,
+            otpVerificationButton: false,
+        });
+    }
+}
+
 const register = (state, action) => {
     if (action.data === 400) {
         return updateObject(state, {
@@ -197,7 +221,6 @@ const register = (state, action) => {
         });
     }
 }
-
 
 export const handleLoginModal = (state) => {
     return updateObject(state, {
@@ -239,6 +262,7 @@ const Reducer = (state = initialState, action) => {
         case ActionTypes.CATEGORY: return category(state, action);
         case ActionTypes.MESSAGE: return offMessage(state, action);
         case ActionTypes.OTP: return verifyOtp(state, action);
+        case ActionTypes.RESEND_OTP: return handleResendOtp(state, action);
         case ActionTypes.REGISTER: return register(state, action);
         case ActionTypes.LOGIN_MODAL: return handleLoginModal(state, action);
         case ActionTypes.REGISTER_MODAL: return handleRegisterModal(state, action);

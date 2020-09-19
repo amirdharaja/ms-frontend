@@ -9,6 +9,7 @@ export const CHECKOUT = 'CHECKOUT';
 export const CATEGORY = 'CATEGORY';
 export const MESSAGE = 'MESSAGE';
 export const OTP = 'OTP';
+export const RESEND_OTP = 'RESEND_OTP';
 export const REGISTER = 'REGISTER';
 export const LOGIN_MODAL = 'LOGIN_MODAL';
 export const REGISTER_MODAL = 'REGISTER_MODAL';

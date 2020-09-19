@@ -129,11 +129,17 @@ class MainNav extends React.PureComponent {
         this.props.onAuth(this.state.username, this.state.password);
     }
 
-    otpVerification = () => {
+    otpVerification = (event) => {
+        event.preventDefault();
         this.props.message();
         if (this.state.otp.length === 6) {
-            this.props.verifyOtp(this.state.otp);
+            this.props.verifyOtp(this.state.otp, this.state.username);
         }
+    }
+
+    resendOtp = (event) => {
+        event.preventDefault();
+        this.props.resendOtp(this.state.username);
     }
 
     componentDidMount() {
@@ -357,6 +363,7 @@ class MainNav extends React.PureComponent {
                                     <br />
                                     <Button className='login-form__button' color='light' type='submit' onClick={this.otpVerification} block>VERIFY</Button>
                                 </Form>
+                                <Button onClick={this.resendOtp} color="link" size={'sm'} block>Resend OTP</Button>
                                 <hr />
                             </ModalBody>
                         </Modal>
@@ -375,10 +382,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         onAuth: (username, password) => dispatch(authActions.authLogin(username, password)),
+        resendOtp: (username) => dispatch(authActions.resendOtp(username)),
         register: (data) => dispatch(authActions.authSignup(data)),
         logout: () => dispatch(authActions.logout()),
         message: () => dispatch(authActions.message()),
-        verifyOtp: (otp) => dispatch(authActions.verifyOtp(otp)),
+        verifyOtp: (otp, username) => dispatch(authActions.verifyOtp(otp, username)),
         LModal: () => dispatch(authActions.loginModal()),
         RModal: () => dispatch(authActions.registerModal()),
         OModal: () => dispatch(authActions.otpModal()),

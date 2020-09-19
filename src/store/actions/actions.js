@@ -21,6 +21,7 @@ export const checkout = data => ({ type: ActionTypes.CHECKOUT, data: data })
 export const categoryData = data => ({ type: ActionTypes.CATEGORY, data: data })
 
 export const handleOtp = data => ({ type: ActionTypes.OTP, data: data })
+export const handleResendOtp = data => ({ type: ActionTypes.RESEND_OTP, data: data })
 
 export const handleRegister = data => ({ type: ActionTypes.REGISTER, data: data })
 export const handleLoginModel = () => ({ type: ActionTypes.LOGIN_MODAL })
@@ -42,6 +43,7 @@ export const logout = () => {
         localStorage.removeItem('expirationDate')
         localStorage.removeItem('user_id')
         localStorage.removeItem('isAuthenticated')
+        localStorage.removeItem('phone')
         dispatch(authLogout());
     }
 }
@@ -50,15 +52,29 @@ export const message = () => {
     return dispatch => { dispatch(offMessage()); }
 }
 
-export const verifyOtp = (otp) => {
-    let phone = localStorage.getItem('phone')
+export const verifyOtp = (otp, username) => {
+    if (!username || username === null) {
+        username = localStorage.getItem('phone')
+    }
     return dispatch => {
-        axios.post(ActionTypes.BASE_URL + '/validate/otp/', { otp: otp, phone: phone })
+        axios.post(ActionTypes.BASE_URL + '/validate/otp/', { otp: otp, phone: username })
             .then(response => {
                 dispatch(handleOtp(response.status));
             })
             .catch(error => {
                 dispatch(handleOtp(error.response.status));
+            })
+    }
+}
+
+export const resendOtp = (username) => {
+    return dispatch => {
+        axios.post(ActionTypes.BASE_URL + '/resend/otp/', {username: username})
+            .then(response => {
+                dispatch(handleResendOtp(response.status));
+            })
+            .catch(error => {
+                dispatch(handleResendOtp(error.response.status));
             })
     }
 }
